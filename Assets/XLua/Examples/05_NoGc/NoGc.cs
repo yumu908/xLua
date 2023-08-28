@@ -1,9 +1,9 @@
-﻿/*
- * Tencent is pleased to support the open source community by making xLua available.
- * Copyright (C) 2016 THL A29 Limited, a Tencent company. All rights reserved.
- * Licensed under the MIT License (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
- * http://opensource.org/licenses/MIT
- * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+/*
+* Tencent is pleased to support the open source community by making xLua available.
+* Copyright (C) 2016 THL A29 Limited, a Tencent company. All rights reserved.
+* Licensed under the MIT License (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+* http://opensource.org/licenses/MIT
+* Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 */
 
 using UnityEngine;
@@ -163,15 +163,25 @@ namespace XLuaTest
             luaenv.Global.Set("monoBehaviour", this);
 
             luaenv.Global.Get("id", out f1);
+            Debug.Log("id1:" + f1);
             luaenv.Global.Get("id", out f2);
+            Debug.Log("id2:" + f2);
             luaenv.Global.Get("id", out f3);
+            Debug.Log("id3:" + f3);
             luaenv.Global.Get("id", out f4);
+            Debug.Log("id4:" + f4);
             luaenv.Global.Get("id", out f5);
+            Debug.Log("id5:" + f5);
 
             luaenv.Global.Get("array_exchange", out farr);
+            Debug.Log("array_exchange:" + farr);
             luaenv.Global.Get("lua_access_csharp", out flua);
+            Debug.Log("lua_access_csharp:" + flua);
+
             luaenv.Global.Get("exchanger", out ie);
+            Debug.Log("exchanger:" + ie);
             luaenv.Global.Get("add", out add);
+            Debug.Log("add:" + add);
 
             luaenv.Global.Set("g_int", 123);
             luaenv.Global.Set(123, 456);
@@ -235,7 +245,7 @@ namespace XLuaTest
 
         void OnDestroy()
         {
-            f1 =  null;
+            f1 = null;
             f2 = null;
             f3 = null;
             f4 = null;
